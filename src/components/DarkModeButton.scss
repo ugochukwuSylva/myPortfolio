@@ -1,0 +1,12 @@
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+
+  & svg {
+    font-size: 2rem;
+  }
+}
