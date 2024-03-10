@@ -1,8 +1,12 @@
-import "./Hero.scss";
+import "./HeroV1.scss";
 import { ReactTyped } from "react-typed";
 import CountUp from "react-countup";
+import ButtonDownload from "./ButtonDownload";
+import useWindowResizer from "../hook/useWindowResizer";
 
 function Hero() {
+  const { showButton } = useWindowResizer(960);
+
   return (
     <div className="hero">
       <div className="hero__text__container">
@@ -13,7 +17,7 @@ function Hero() {
             <ReactTyped
               strings={[
                 "Nwaba Ugochukwu",
-                "A Frontend Developer",
+                // "A Developer",
                 "A Software Engineer",
               ]}
               typeSpeed={30}
@@ -48,6 +52,11 @@ function Hero() {
             <h6>Testability</h6>
           </div>
         </div>
+        {showButton && (
+          <div style={{ transform: "translateY(5rem)" }}>
+            <ButtonDownload>My Resume</ButtonDownload>
+          </div>
+        )}
       </div>
       {/*  */}
 

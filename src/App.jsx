@@ -16,11 +16,15 @@ function App() {
 
   return (
     <>
-      {components.map((component, i) => (
+      {/* {components.map((component, i) => (
         <Animation key={i} delay={i}>
           {component}
         </Animation>
-      ))}
+      ))} */}
+      <Header />
+      <About />
+      <Projects />
+      <Footer />
     </>
   );
 }

@@ -5,9 +5,12 @@ import "./NavBar.scss";
 import ButtonDownload from "./ButtonDownload";
 import NavBarList from "./NavBarList";
 import DarkModeButton from "./DarkModeButton";
+import useWindowResizer from "../hook/useWindowResizer";
+import { BiMenuAltRight } from "react-icons/bi";
 
 function NavBar() {
   const [isActive, setIsActive] = useState(null);
+  const { showButton } = useWindowResizer(960);
 
   const list = ["Home", "About", "Projects", "Contact"];
 
@@ -31,9 +34,15 @@ function NavBar() {
             listItem={listItem}
           />
         ))}
-        <DarkModeButton />
       </ul>
-      <ButtonDownload>My Resume</ButtonDownload>
+      <DarkModeButton />
+      {showButton && (
+        <span>
+          <BiMenuAltRight className="menuIcon" />
+        </span>
+      )}
+
+      {!showButton && <ButtonDownload>My Resume</ButtonDownload>}
     </nav>
   );
 }
