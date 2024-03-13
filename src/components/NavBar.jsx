@@ -10,6 +10,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 
 function NavBar() {
   const [isActive, setIsActive] = useState(null);
+  const [showMenu, setShowMenu] = useState(false);
   const { showButton } = useWindowResizer(960);
 
   const list = ["Home", "About", "Projects", "Contact"];
@@ -25,7 +26,10 @@ function NavBar() {
     <nav className={`navigation`}>
       <span className="navigation__logo">UG</span>
 
-      <ul className="navigation__list">
+      <ul
+        // style={{ transform: showMenu ? "translateX(0)" : "translateX(100%)" }}
+        className={`navigation__list ${showMenu && "displayMenu"}`}
+      >
         {list.map((listItem, i) => (
           <NavBarList
             key={i}
@@ -34,10 +38,14 @@ function NavBar() {
             listItem={listItem}
           />
         ))}
+        <span className="closeMenu" onClick={() => setShowMenu(false)}>
+          &times;
+        </span>
       </ul>
+
       <DarkModeButton />
       {showButton && (
-        <span>
+        <span onClick={() => setShowMenu(true)}>
           <BiMenuAltRight className="menuIcon" />
         </span>
       )}
