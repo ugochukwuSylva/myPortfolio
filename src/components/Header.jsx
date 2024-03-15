@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./Header.scss";
 // import Hero from "./Hero";
-import HeroV1 from "./HeroV1";
+import Hero from "./Hero";
 import NavBar from "./NavBar";
 
 function Header() {
@@ -30,7 +30,7 @@ function Header() {
   return (
     <header ref={headerRef} className="header" id="Home">
       <NavBar />
-      <HeroV1 />
+      <Hero />
     </header>
   );
 }

@@ -70,9 +70,19 @@
 
     @media only screen and (max-width: 60em) {
       position: absolute;
+      top: 0;
+      left: 0;
+      height: 100dvh;
+      width: 100%;
+      background-color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      backdrop-filter: blur(1.5rem);
       transform: translateX(100%);
-      opacity: 0;
-      visibility: hidden;
+      transition: transform 0.6s ease-in;
     }
   }
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./NavBar.scss";
 
@@ -15,20 +15,28 @@ function NavBar() {
 
   const list = ["Home", "About", "Projects", "Contact"];
 
-  // function handleScroll() {
-  //   if (window.scrollY >= 500) setIsSticky(true);
-  //   else setIsSticky(false);
-  // }
-
-  // window.addEventListener("scroll", handleScroll);
+  // This code prevents scrolling when the mobile navigation is open
+  useEffect(() => {
+    if (
+      document.documentElement.childNodes[2]?.childNodes[1]?.childNodes[0]?.childNodes[0]?.childNodes[1].className.includes(
+        "open"
+      )
+    ) {
+      document.documentElement.childNodes[2]?.classList.add("no_overflow");
+    } else {
+      document.documentElement.childNodes[2]?.classList.remove("no_overflow");
+    }
+  }, [showMenu]);
 
   return (
     <nav className={`navigation`}>
       <span className="navigation__logo">UG</span>
 
       <ul
-        // style={{ transform: showMenu ? "translateX(0)" : "translateX(100%)" }}
-        className={`navigation__list ${showMenu && "displayMenu"}`}
+        style={{
+          transform: showMenu && "translateX(0)",
+        }}
+        className={`navigation__list ${showMenu && "open"}`}
       >
         {list.map((listItem, i) => (
           <NavBarList
