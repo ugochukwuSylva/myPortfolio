@@ -1,0 +1,20 @@
+@import "../mixin/mixin.scss";
+
+.dots-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 47%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-3rem);
+
+  @include media-queries(50em) {
+    transform: translateY(-10rem);
+  }
+
+  @include media-queries(38.13em) {
+    transform: translateY(-1rem);
+  }
+}

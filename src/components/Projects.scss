@@ -1,14 +1,109 @@
+@import "../mixin/mixin.scss";
+
 .projects {
   position: relative;
   overflow: hidden;
   z-index: 10;
+  height: 64rem;
+
+  @include media-queries(60.33em) {
+    padding: 5rem 0;
+  }
+
+  @include media-queries(38.13em) {
+    height: 63rem;
+  }
+
+  & .btn {
+    background-color: var(--color-gray-bg1);
+    color: var(--color-gray-text1);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    @include media-queries(50em) {
+      top: 81%;
+    }
+
+    &--left {
+      transform: translateX(10rem);
+      left: 0;
+
+      @include media-queries(60.38em) {
+        transform: translateX(3rem);
+      }
+
+      @include media-queries(50em) {
+        transform: translateX(9rem);
+      }
+
+      @include media-queries(38.13em) {
+        transform: translate(3rem, -25rem);
+      }
+
+      @include media-queries(24.38em) {
+        transform: translate(1rem, -25rem);
+      }
+    }
+
+    &--right {
+      transform: translateX(-10rem);
+      right: 0;
+
+      @include media-queries(60.38em) {
+        transform: translateX(-3rem);
+      }
+
+      @include media-queries(50em) {
+        transform: translateX(-9rem);
+      }
+
+      @include media-queries(38.13em) {
+        transform: translate(-3rem, -25rem);
+      }
+
+      @include media-queries(24.38em) {
+        transform: translate(-1rem, -25rem);
+      }
+    }
+  }
 
   & .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
+
+    @include media-queries(75em) {
+      position: relative;
+      width: 60rem;
+      height: 40rem;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    @include media-queries(43.13em) {
+      transform: scale(0.9);
+      margin: auto;
+    }
+
+    @include media-queries(38.13em) {
+      width: 30rem;
+      height: 80rem;
+      margin-top: -5rem;
+      display: block;
+      position: relative;
+      margin-top: -10rem;
+      transform: scale(0.8);
+    }
   }
 
   &-bg {

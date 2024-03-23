@@ -22,7 +22,7 @@ function About() {
           <div className="about__grid-image">
             <img
               srcSet="./about-image-1.jpg 1x, ./about-image-1.jpg 2x"
-              alt="tech-images"
+              alt="computer-images"
             />
           </div>
           {/*  */}
@@ -30,7 +30,7 @@ function About() {
           <div className="about__grid-image">
             <img
               srcSet="./about-image-2.jpg 1x, ./about-image-2.jpg 2x"
-              alt="tech-images"
+              alt="computer-images"
             />
           </div>
 

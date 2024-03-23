@@ -1,40 +1,78 @@
-$color-span: #ced4da;
+// $color-span: #ced4da;
 
-.stack {
-  padding: 2rem;
-  //   mask-image: linear-gradient(
-  //     90deg,
-  //     transparent 20%,
-  //     #fff,
-  //     #fff,
-  //     transparent 80%
-  //   );
-  overflow: hidden;
-  white-space: nowrap;
+// .stack {
+//   padding: 2rem;
+//   //   mask-image: linear-gradient(
+//   //     90deg,
+//   //     transparent 20%,
+//   //     #fff,
+//   //     #fff,
+//   //     transparent 80%
+//   //   );
+//   overflow: hidden;
+//   white-space: nowrap;
+//   display: flex;
+//   justify-content: center;
+
+//   & div {
+//     display: inline-block;
+//     animation: animate 10s linear infinite;
+
+//     span {
+//       display: inline-block;
+//       padding: 0.5rem 1rem;
+//       letter-spacing: 0.5rem;
+//       background-color: $color-span;
+//       margin: 1rem;
+//       border-radius: 1rem;
+//     }
+//   }
+
+//   @keyframes animate {
+//     0% {
+//       transform: translateX(100%);
+//     }
+
+//     100% {
+//       transform: translateX(-100%);
+//     }
+//   }
+// }
+
+////////////////////////////////////////
+///
+
+.accordion-container {
+  width: 40rem;
+  height: 30rem;
+  box-shadow: 2px 3px 8px #adb5bd;
+  margin: 4rem auto;
+  background-color: red;
   display: flex;
-  justify-content: center;
+  position: relative;
 
-  & div {
-    display: inline-block;
-    animation: animate 10s linear infinite;
+  & .accordion {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
 
-    span {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      letter-spacing: 0.5rem;
-      background-color: $color-span;
-      margin: 1rem;
-      border-radius: 1rem;
-    }
-  }
-
-  @keyframes animate {
-    0% {
-      transform: translateX(100%);
+    &-1 {
+      // @extend .accordion;
+      background-color: #c2255c;
     }
 
-    100% {
-      transform: translateX(-100%);
+    &-2 {
+      // @extend .accordion;
+      background-color: #862e9c;
+    }
+
+    &-3 {
+      // @extend .accordion;
+      background-color: #5f3dc4;
     }
   }
 }

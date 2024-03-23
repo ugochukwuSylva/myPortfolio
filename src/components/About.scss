@@ -6,18 +6,42 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
-    // width: 70%;
     row-gap: 6rem;
+
+    @media only screen and (max-width: 50.63em) {
+      grid-template-columns: repeat(1, minmax(10px, 1fr));
+    }
+
+    & > :nth-child(3) {
+      @media only screen and (max-width: 50.63em) {
+        grid-row: 4/5;
+      }
+    }
 
     &-text {
       & .text-heading.right {
         text-align: end;
+
+        @media only screen and (max-width: 52.5em) {
+          white-space: nowrap;
+        }
+
+        @media only screen and (max-width: 50.63em) {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: baseline;
+        }
       }
 
       & .number {
         font-size: 7rem;
         font-weight: 900;
         color: var(--color-gray-text2);
+
+        @media only screen and (max-width: 24.38em) {
+          font-size: 5.5rem;
+        }
       }
 
       & .skill {
@@ -26,7 +50,7 @@
         letter-spacing: 0.7rem;
         position: relative;
         font-weight: 600;
-        padding: 0 4rem;
+        padding: 1.5rem;
       }
 
       & p {

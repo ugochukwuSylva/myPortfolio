@@ -28,6 +28,11 @@ function NavBar() {
     }
   }, [showMenu]);
 
+  function handleClick(index) {
+    setIsActive(index);
+    setShowMenu(false);
+  }
+
   return (
     <nav className={`navigation`}>
       <span className="navigation__logo">UG</span>
@@ -42,10 +47,11 @@ function NavBar() {
           <NavBarList
             key={i}
             index={i === isActive}
-            onClick={() => setIsActive(i)}
+            onClick={() => handleClick(i)}
             listItem={listItem}
           />
         ))}
+
         <span className="closeMenu" onClick={() => setShowMenu(false)}>
           &times;
         </span>

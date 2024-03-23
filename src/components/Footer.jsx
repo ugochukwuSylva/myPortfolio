@@ -23,7 +23,7 @@ function Footer() {
         className="footer-contact"
       >
         <div className="footer-heading">
-          <h3>Contact</h3>
+          <h3>Contact me</h3>
           <IoMdContact />
         </div>
         <span className="contact-icon--container">

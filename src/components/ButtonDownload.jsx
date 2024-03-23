@@ -1,6 +1,4 @@
 import "./ButtonDownload.scss";
-// ./tech-resume.pdf
-// download="RESUME"
 
 function ButtonDownload({ children }) {
   // const colorType = {
@@ -10,7 +8,11 @@ function ButtonDownload({ children }) {
   // };
 
   return (
-    <a href="##" className="resume resume__color-green">
+    <a
+      href="./tech-resume.pdf"
+      download="UGOCHUKWU_RESUME"
+      className="resume resume__color-green"
+    >
       {children}
     </a>
   );

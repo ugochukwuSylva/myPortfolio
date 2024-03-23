@@ -1,3 +1,5 @@
+@import "../mixin/mixin.scss";
+
 .footer {
   padding: 8rem 20rem 3rem 20rem;
   background-color: var(--color-gray-bg1);
@@ -49,6 +51,10 @@
         margin: 1.8rem 1.2rem 1.8rem 0;
       }
     }
+
+    // @media only screen and (max-width: 50.63em) {
+    //   margin-right: 3.5rem;
+    // }
   }
 
   &-copyright {
@@ -57,5 +63,40 @@
     height: 5rem;
     transform: translateY(2rem);
     border-top: 1px solid var(--color-gray-border);
+
+    @media only screen and (max-width: 50.63em) {
+      transform: translateY(0);
+    }
+  }
+
+  // MEDIA QUERIES
+
+  @include media-queries(76.88em) {
+    padding: 8rem 15rem;
+  }
+
+  @include media-queries(70.38em) {
+    padding: 8rem 10rem;
+  }
+  @include media-queries(62.5em) {
+    padding: 8rem;
+  }
+
+  @include media-queries(60em) {
+    padding: 8rem 3rem;
+  }
+
+  @include media-queries(50.63em) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+    text-align: center;
+  }
+
+  @include media-queries(26.88em) {
+    * {
+      transform: scale(1.1);
+    }
   }
 }

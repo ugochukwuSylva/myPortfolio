@@ -1,21 +1,29 @@
+import useWindowResizer from "../hook/useWindowResizer";
 import "./ProjectList.scss";
 
-function ProjectList({ data }) {
+function ProjectList({ data, index, translateX }) {
   const {
     frontImage,
     backImage,
     title,
     overview,
     technologies,
-    backgroundImage,
+    // backgroundImage,
   } = data;
+
+  const { showButton } = useWindowResizer(1200);
 
   // const styles = {
   //   backgroundImage,
   // };
 
   return (
-    <div className="project">
+    <div
+      className="project"
+      style={{
+        transform: showButton && `translateX(${(index + translateX) * 100}%)`,
+      }}
+    >
       <div className="card card-front">
         <img src={frontImage} alt="img-of-project" />
         <div className="project-text">

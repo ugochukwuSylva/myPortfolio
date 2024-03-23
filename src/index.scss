@@ -39,6 +39,8 @@
 
   --color-gray-stable1: #343a40;
   --color-gray-stable2: #dee2e6;
+  --color-gray-stable3: #adb5bd;
+  --color-gray-stable4: #f1f3f5;
 
   scroll-behavior: smooth;
 }
@@ -51,6 +53,10 @@
 html {
   font-size: 62.5%;
   transition: all 3s ease;
+
+  @media only screen and (max-width: 17.5em) {
+    font-size: 48%;
+  }
 }
 
 body {
@@ -63,16 +69,6 @@ body {
   overflow-x: hidden;
 }
 
-section {
-  padding: 8rem 20rem;
-}
-
-// main {
-//   max-width: 120rem;
-//   margin: 0 auto;
-
-// }
-
 ul {
   list-style: none;
 }
@@ -81,7 +77,6 @@ a:link,
 a:visited {
   text-decoration: none;
   color: inherit;
-  // padding: 1rem;
 }
 
 img {
@@ -101,10 +96,38 @@ img {
   padding-bottom: 3rem;
 }
 
-// .heading-primary.right {
-//   text-align: right;
-// }
-
 .no_overflow {
   overflow: hidden;
+}
+
+section {
+  padding: 8rem 20rem;
+
+  @media only screen and (max-width: 76.88em) {
+    padding: 8rem 15rem;
+  }
+
+  @media only screen and (max-width: 70.38em) {
+    padding: 8rem 10rem;
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    padding: 8rem;
+  }
+
+  @media only screen and (max-width: 60em) {
+    padding: 8rem 3rem;
+  }
+  //
+  @media only screen and (max-width: 50.63em) {
+    padding: 8rem 15rem;
+  }
+
+  @media only screen and (max-width: 42.63em) {
+    padding: 8rem;
+  }
+
+  @media only screen and (max-width: 26.88em) {
+    padding: 8rem 3rem;
+  }
 }

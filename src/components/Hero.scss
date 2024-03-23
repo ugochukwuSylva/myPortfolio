@@ -11,12 +11,12 @@
     padding: 6rem 10rem;
   }
 
-  @media only screen and (max-width: 70.25em) {
-    // padding: 6rem 10rem;
+  @media only screen and (max-width: 60em) {
+    padding: 4rem;
   }
 
-  @media only screen and (max-width: 63.63em) {
-    padding: 4rem 7rem;
+  @media only screen and (max-width: 55em) {
+    grid-template-columns: 1fr;
   }
 
   @media only screen and (max-width: 30em) {
@@ -64,6 +64,10 @@
       margin-top: 1rem;
       font-size: 1.5rem;
       color: var(--color-gray-text1);
+
+      @media only screen and (max-width: 23.44em) {
+        transform: translateX(-1.8rem);
+      }
     }
 
     & .hero__skill__container {
@@ -74,8 +78,10 @@
 
       @media only screen and (max-width: 55em) {
         justify-content: center;
-        // transform: scale(0.8);
-        // margin-top: 1rem;
+      }
+
+      @media only screen and (max-width: 23.44em) {
+        transform: translateX(-1.8rem) scale(0.9);
       }
 
       & .hero__skill {
@@ -104,11 +110,12 @@
   &__img__container {
     position: relative;
 
+    @media only screen and (max-width: 63em) {
+      transform: scale(0.9);
+    }
+
     @media only screen and (max-width: 55em) {
       display: none;
-      // grid-column: 1/-1;
-      // grid-row: 2/3;
-      // transform: scale(0.6) translateY(-15rem);
     }
 
     & picture {
