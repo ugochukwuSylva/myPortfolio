@@ -68,6 +68,10 @@
       @media only screen and (max-width: 23.44em) {
         transform: translateX(-1.8rem);
       }
+
+      @media only screen and (max-width: 22.5em) {
+        transform: translateX(-2.5rem);
+      }
     }
 
     & .hero__skill__container {
