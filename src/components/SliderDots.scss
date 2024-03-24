@@ -17,4 +17,8 @@
   @include media-queries(38.13em) {
     transform: translateY(-1rem);
   }
+
+  @include media-queries(22.5em) {
+    transform: translateX(-2.5rem);
+  }
 }
