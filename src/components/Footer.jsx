@@ -77,9 +77,15 @@ function Footer() {
         </span>
       </motion.div>
 
-      <div className="footer-copyright">
+      <motion.div
+        className="footer-copyright"
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <em> &copy; All rights reserved by Nwaba Ugochukwu {year} </em>
-      </div>
+      </motion.div>
     </footer>
   );
 }

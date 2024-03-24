@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import "./Header.scss";
-// import Hero from "./Hero";
+import { useEffect, useRef } from "react";
+
 import Hero from "./Hero";
 import NavBar from "./NavBar";
 
@@ -28,10 +29,18 @@ function Header() {
   }, []);
 
   return (
-    <header ref={headerRef} className="header" id="Home">
+    <motion.header
+      ref={headerRef}
+      className="header"
+      id="Home"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
       <NavBar />
       <Hero />
-    </header>
+    </motion.header>
   );
 }
 

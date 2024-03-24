@@ -1,8 +1,15 @@
 import "./About.scss";
+import { motion } from "framer-motion";
 
 function About() {
   return (
-    <section id="About">
+    <motion.section
+      id="About"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
       <div className="about">
         <h1 className="heading-primary">About</h1>
         <div className="about__grid">
@@ -51,7 +58,7 @@ function About() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

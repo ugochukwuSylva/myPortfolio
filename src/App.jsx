@@ -6,13 +6,13 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 function App() {
-  const components = [
-    <Header />,
-    <About />,
-    <Projects />,
-    // <Stack />,
-    <Footer />,
-  ];
+  // const components = [
+  //   <Header />,
+  //   <About />,
+  //   <Projects />,
+  //   // <Stack />,
+  //   <Footer />,
+  // ];
 
   return (
     <>
@@ -21,6 +21,7 @@ function App() {
           {component}
         </Animation>
       ))} */}
+
       <Header />
       <About />
       <Projects />

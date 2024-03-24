@@ -1,4 +1,5 @@
 import "./Projects.scss";
+import { motion } from "framer-motion";
 import { PROJECTS } from "../data/projects";
 import ProjectList from "./ProjectList";
 import useWindowResizer from "../hook/useWindowResizer";
@@ -23,7 +24,14 @@ function Project() {
   }
 
   return (
-    <section id="Projects" className="projects">
+    <motion.section
+      id="Projects"
+      className="projects"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
       <h1 className="heading-primary right">Projects</h1>
 
       {showButton && (
@@ -56,7 +64,7 @@ function Project() {
       )}
 
       {showButton && <SliderDots dotSlide={dotSlide} translateX={translateX} />}
-    </section>
+    </motion.section>
   );
 }
 
