@@ -29,7 +29,7 @@ function Hero() {
         <div>
           I have a great passion in creating websites that gives users the best
           experience ever. I ensure my codes are modular, readable, maintainable
-          and highly resuable. Hire me and lets get started.
+          and highly resuable. Hire me and let's get started.
         </div>
 
         <div className="hero__skill__container">
