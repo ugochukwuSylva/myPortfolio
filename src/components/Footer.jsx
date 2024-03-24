@@ -29,7 +29,7 @@ function Footer() {
         <span className="contact-icon--container">
           <p>
             <a href="tel:+2347030753192">
-              <MdCall /> +234 703 0753 192
+              <MdCall /> +234 909 685 9314
             </a>
           </p>
           <p>
