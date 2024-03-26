@@ -52,6 +52,10 @@
       @include media-queries(24.38em) {
         transform: translate(1rem, -25rem);
       }
+
+      @include media-queries(22.5em) {
+        transform: translate(0.5rem, -25rem);
+      }
     }
 
     &--right {
@@ -72,6 +76,10 @@
 
       @include media-queries(24.38em) {
         transform: translate(-1rem, -25rem);
+      }
+
+      @include media-queries(22.5em) {
+        transform: translate(-0.5rem, -25rem);
       }
     }
   }

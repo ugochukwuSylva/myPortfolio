@@ -1,5 +1,5 @@
 .hero {
-  height: calc(100dvh - 7rem);
+  height: calc(100vh - 7rem);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,11 +34,20 @@
       font-size: 4rem;
       color: var(--color-gray-text1);
       font-weight: 900;
+      display: inline-block;
+
+      @media only screen and (max-width: 22.5em) {
+        transform: translateX(-2rem);
+      }
     }
 
     & > :nth-child(2) {
       font-size: 2rem;
       font-weight: 800;
+
+      @media only screen and (max-width: 22.5em) {
+        transform: translateX(-2rem);
+      }
     }
 
     & > :nth-child(2) span {
