@@ -16,10 +16,6 @@
   background-color: var(--color-secondary);
   color: var(--color-gray-stable1) !important;
 
-  @media only screen and (max-width: 26.88em) {
-    pointer-events: none;
-  }
-
   &:active {
     transform: scale(1.3);
   }
