@@ -1,9 +1,8 @@
 import "./About.scss";
-import { motion } from "framer-motion";
 
 function About() {
   return (
-    <motion.section
+    <section
       id="About"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +57,7 @@ function About() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
