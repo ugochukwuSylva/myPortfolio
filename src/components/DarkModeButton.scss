@@ -5,6 +5,14 @@ button {
   color: inherit;
   display: flex;
   align-items: center;
+  padding: 0.3rem;
+  border: 2px solid transparent;
+  transition: border 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    border: 3px solid var(--color-primary);
+  }
 
   & svg {
     font-size: 2rem;

@@ -45,6 +45,14 @@
   scroll-behavior: smooth;
 }
 
+* {
+  outline: none;
+}
+
+*:focus {
+  border: 3px solid var(--color-primary);
+}
+
 *::selection {
   color: #fff;
   background-color: var(--color-secondary);
