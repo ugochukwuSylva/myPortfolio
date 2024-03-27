@@ -37,7 +37,7 @@ function Hero() {
             <span>
               <CountUp end={100} duration={2} />%
             </span>
-            <h6>Resuability</h6>
+            <h6>Reusability</h6>
           </div>
           <div className="hero__skill">
             <span>
