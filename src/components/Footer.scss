@@ -97,6 +97,10 @@
   @include media-queries(26.88em) {
     * {
       transform: scale(1.1);
+
+      svg {
+        width: 4rem;
+      }
     }
   }
 }
