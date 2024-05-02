@@ -18,11 +18,13 @@ function About() {
               <span className="skill">Dexterity</span>
             </div>
             <p>
-              I am a programmer skilled in bringing about optimazation of
+              I am a programmer skilled in bringing about optimization of
               applications with overall improvement in user experience. With the
-              help of react hooks like memo, useMemo, useCallback, code
-              splitting or lazy loading, the whole flexibility in general web
-              applications have been taking to a whole new level.
+              help of new technologies like Nextjs that leverages on both server
+              and client side rendering, as well as react hooks such as memo,
+              useMemo, useCallback, code splitting or lazy loading, the whole
+              flexibility in general web applications have been taking to a
+              whole new level.
             </p>
           </div>
           <div className="about__grid-image">
