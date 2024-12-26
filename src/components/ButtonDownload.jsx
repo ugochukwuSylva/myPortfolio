@@ -2,7 +2,7 @@ import "./ButtonDownload.scss";
 
 function ButtonDownload({ children }) {
   return (
-    <a href="./MY_RESUME.pdf" download="UGOCHUKWU_RESUME" className="resume">
+    <a href="./UGOCHUKWU_CV.pdf" download="UGOCHUKWU_CV" className="resume">
       {children}
     </a>
   );
